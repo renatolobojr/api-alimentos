@@ -15,6 +15,17 @@ return new class extends Migration
     {
         Schema::create('alimentos', function (Blueprint $table) {
             $table->id();
+            $table->string(column:'nome');
+            $table->string(column:'tipo');
+            $table->string(column:'preparo');
+            $table->integer(column:'calorias');
+            $table->integer(column:'proteinas');
+            $table->integer(column:'carboidratos');
+            $table->integer(column:'gorduras');
+            $table->float(column:'sodio');
+            $table->integer(column:'porcao');
+            $table->string(column:'medida');
+            $table->float(column:'fator_conversor');
             $table->timestamps();
         });
     }
@@ -26,6 +37,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Alimentos');
+        Schema::dropIfExists('alimentos');
     }
 };
