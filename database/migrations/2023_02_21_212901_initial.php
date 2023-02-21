@@ -15,8 +15,6 @@ return new class extends Migration
     {
         Schema::create('alimentos', function (Blueprint $table) {
             $table->id();
-            $table->nome();
-            $table->calorias();
             $table->timestamps();
         });
     }
