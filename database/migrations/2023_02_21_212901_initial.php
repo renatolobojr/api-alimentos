@@ -19,12 +19,6 @@ return new class extends Migration
             $table->calorias();
             $table->timestamps();
         });
-
-        Schema::create('tipos_refeicao', function (Blueprint $table) {
-            $table->id();
-            $table->nome();
-            $table->timestamps();
-        });
     }
 
     /**
