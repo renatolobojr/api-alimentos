@@ -39,8 +39,20 @@ class AlimentoController extends Controller
     public function store(Request $request)
     {
         $alimento = new Alimento;
-        $alimento->titulo = $request->input('titulo');
+        $alimento->nome = $request->input('nome');
+        $alimento->tipo = $request->input('tipo');
+        $alimento->preparo = $request->input('preparo');
         $alimento->conteudo = $request->input('conteudo');
+        $alimento->grupo_id = $request->input('grupo_id');
+        $alimento->calorias = $request->input('calorias');
+        $alimento->proteinas = $request->input('proteinas');
+        $alimento->carboidratos = $request->input('carboidratos');
+        $alimento->gorduras = $request->input('gorduras');
+        $alimento->sodio = $request->input('sodio');
+        $alimento->porcao = $request->input('porcao');
+        $alimento->medida = $request->input('medida');
+        $alimento->fator_conversor = $request->input('fator_conversor');
+        $alimento->fonte_id = $request->input('fonte_id');
 
         if( $alimento->save() ){
         return new AlimentoResource( $alimento );
@@ -79,9 +91,20 @@ class AlimentoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $alimento = Alimento::findOrFail( $request->id );
-        $alimento->titulo = $request->input('titulo');
+        $alimento = Alimento::findOrFail( $request->id );$alimento->nome = $request->input('nome');
+        $alimento->tipo = $request->input('tipo');
+        $alimento->preparo = $request->input('preparo');
         $alimento->conteudo = $request->input('conteudo');
+        $alimento->grupo_id = $request->input('grupo_id');
+        $alimento->calorias = $request->input('calorias');
+        $alimento->proteinas = $request->input('proteinas');
+        $alimento->carboidratos = $request->input('carboidratos');
+        $alimento->gorduras = $request->input('gorduras');
+        $alimento->sodio = $request->input('sodio');
+        $alimento->porcao = $request->input('porcao');
+        $alimento->medida = $request->input('medida');
+        $alimento->fator_conversor = $request->input('fator_conversor');
+        $alimento->fonte_id = $request->input('fonte_id');
 
         if( $alimento->save() ){
         return new AlimentoResource( $alimento );
