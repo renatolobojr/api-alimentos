@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string(column:'nome');
             $table->string(column:'tipo');
             $table->string(column:'preparo');
+            $table->foreignId(column:'grupo_id');
             $table->integer(column:'calorias');
             $table->integer(column:'proteinas');
             $table->integer(column:'carboidratos');
@@ -26,6 +27,7 @@ return new class extends Migration
             $table->integer(column:'porcao');
             $table->string(column:'medida');
             $table->float(column:'fator_conversor');
+            $table->foreignId(column:'fonte_id');
             $table->timestamps();
         });
     }
