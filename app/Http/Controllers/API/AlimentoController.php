@@ -42,7 +42,6 @@ class AlimentoController extends Controller
         $alimento->nome = $request->input('nome');
         $alimento->tipo = $request->input('tipo');
         $alimento->preparo = $request->input('preparo');
-        $alimento->conteudo = $request->input('conteudo');
         $alimento->grupo_id = $request->input('grupo_id');
         $alimento->calorias = $request->input('calorias');
         $alimento->proteinas = $request->input('proteinas');
@@ -94,7 +93,6 @@ class AlimentoController extends Controller
         $alimento = Alimento::findOrFail( $request->id );$alimento->nome = $request->input('nome');
         $alimento->tipo = $request->input('tipo');
         $alimento->preparo = $request->input('preparo');
-        $alimento->conteudo = $request->input('conteudo');
         $alimento->grupo_id = $request->input('grupo_id');
         $alimento->calorias = $request->input('calorias');
         $alimento->proteinas = $request->input('proteinas');
