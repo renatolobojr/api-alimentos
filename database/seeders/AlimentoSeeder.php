@@ -1,6 +1,8 @@
 <?php
 
 namespace Database\Seeders;
+
+use DateTime;
 use Illuminate\Support\Facades\DB;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -17,7 +19,7 @@ class AlimentoSeeder extends Seeder
     {
         DB::table('alimentos')->insert([
             'nome' => 'banana',
-            'tipo'=> 'prata',
+            'tipo'=> 'ouro',
             'preparo'=> 'cozida',
             'grupo_id'=> 10,
             'calorias'=> 78,
@@ -28,7 +30,9 @@ class AlimentoSeeder extends Seeder
             'porcao'=> 100,
             'medida'=> 1,
             'fator_conversor'=> 1,
-            'fonte_id'=> 2
+            'fonte_id'=> 2,
+            'created_at'=> now(),
+            'updated_at'=> now()
         ]);
     }
 }
