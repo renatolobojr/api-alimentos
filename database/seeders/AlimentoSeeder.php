@@ -124,11 +124,6 @@ class AlimentoSeeder extends Seeder
             'fibras'=> 1.2,'sodio'=> 0.001, 'porcao'=> 100, 'medida'=> 1, 'fator'=> 1, 
             'fonte_id'=> 2, 'created_at'=> now(), 'updated_at'=> now()],
 
-            ['nome' => 'Cereais', 'tipo'=> 'milho', 'preparo'=> 'Flocos Sem Sal', 'grupo_id'=> 10,
-            'calorias'=> 112, 'proteinas'=> 2.4, 'carboidratos'=> 23.6, 'gorduras'=> 1.2,
-            'fibras'=> 1.2,'sodio'=> 0.001, 'porcao'=> 100, 'medida'=> 1, 'fator'=> 1, 
-            'fonte_id'=> 2, 'created_at'=> now(), 'updated_at'=> now()],
-
         ]);
     }
 }
