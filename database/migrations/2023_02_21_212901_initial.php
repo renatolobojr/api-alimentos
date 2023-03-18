@@ -20,13 +20,14 @@ return new class extends Migration
             $table->string(column:'preparo');
             $table->foreignId(column:'grupo_id');
             $table->integer(column:'calorias');
-            $table->integer(column:'proteinas');
-            $table->integer(column:'carboidratos');
-            $table->integer(column:'gorduras');
+            $table->float(column:'proteinas');
+            $table->float(column:'carboidratos');
+            $table->float(column:'gorduras');
+            $table->float(column:'fibras');
             $table->float(column:'sodio');
             $table->integer(column:'porcao');
             $table->string(column:'medida');
-            $table->float(column:'fator_conversor');
+            $table->float(column:'fator');
             $table->foreignId(column:'fonte_id');
             $table->timestamps();
         });
